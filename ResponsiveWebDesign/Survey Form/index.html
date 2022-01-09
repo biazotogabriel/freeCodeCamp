@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de Pesquisa</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">
+            Formulário de Pesquisa
+        </h1>
+        <p id="description">
+            Obrigado por reservar um tempo seu para nos ajudar a melhorar a plataforma
+        </p>
+    </header>
+    <form id="survey-form">
+        <div>
+            <label id="name-label" for="name">Nome</label>
+            <input type="text" name="name" id="name" class="input-text" placeholder="Digite seu nome..." required>
+        </div>
+        <div>
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" class="input-text" placeholder="Digite seu email..." required>
+        </div>
+        <div>
+            <label id="number-label" for="number">Idade</label>
+            <input type="number" name="age" id="number" class="input-text" min="10" max="99" placeholder="Idade">
+        </div>
+        <div>
+            <label for="dropdown">Qual das opções abaixo melhor descreve sua função atual?</label>
+            <select id="dropdown" name="role" class="input-text" required>
+                <option disabled selected>Selecione a função atual</option>
+                <option value="student">Estudante</option>
+                <option value="job">Empregado</option>
+                <option value="learner">Estudante Tempo Integral</option>
+                <option value="preferNo">Prefiro não dizer</option>
+                <option value="other">Outro</option>
+            </select>
+        </div>
+        <div>
+            <label for="user-recommend">Você recomendaria a freeCodeCamp para um amigo?</label>
+            <fieldset id="user-recommend">
+                <label>
+                    <input type="radio" name="user-recommend" class="input-radio" value="definitely" checked>
+                    Definitivamente
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" class="input-radio" value="maybe">
+                    Talvez
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" class="input-radio" value="not-sure">
+                    Não tenho certeza
+                </label>
+            </fieldset>
+        </div>
+        <div>
+            <label for="favorite">Qual a sua característica favorita da freeCodeCamp?</label>
+            <select id="favorite" name="favorite" class="input-text">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="challenges">Desafios</option>
+                <option value="projects">Projetos</option>
+                <option value="community">Comunidade</option>
+                <option value="openSource">Código Aberto</option>
+            </select>
+        </div>
+        <div>
+            <label for="improve">Oque você gostaria de melhorar?</label>
+            <fieldset id="improve">
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="front-end-projects">
+                    Projetos Front-End
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="back-end-projects">
+                    Projetos Back-End
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="data-visualization">
+                    Vizualização de Dados
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="challenges">
+                    Desafios
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="open-source-community">
+                    Comunidade de código aberto
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="gitter-help-rooms">
+                    Salas de ajuda
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="videos">
+                    Videos
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="city-meetups">
+                    Encontro em cidades
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="wiki">
+                    Wiki
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="forum">
+                    Forum
+                </label>
+                <label>
+                    <input type="checkbox" name="improve" class="input-check" value="additional-courses">
+                    + cursos
+                </label>
+            </fieldset>
+        </div>
+        <div>
+            <label for="comments">Algum comentário ou sugestão?</label>
+            <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

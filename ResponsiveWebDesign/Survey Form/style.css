@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-darkblue);
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)),
+                      url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--color-white);
+}
+h1 {
+    margin: auto;
+    margin-top: 40px;
+    width: 70vw;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+}
+#description {
+    margin: auto;
+    text-align: center;
+    line-height: 1.7em;
+    width: 70vw;
+    font-style: italic;
+}
+form {
+    margin: 30px auto;
+    width: 60vw;
+    background-color: var(--color-darkblue-alpha, darkblue);
+    border-radius: 5px;
+    padding: 20px 40px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    
+}
+div {
+    text-align: left;
+    padding: 10px 0;
+}
+fieldset {
+    border: none;
+}
+label {
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+select, input, textarea, button {
+    font-family: inherit;  
+    font-size: inherit;
+    line-height: inherit;  
+    border: none;
+    color: #495057;
+    transition: box-shadow 200ms ease-in-out;
+}
+.input-textarea {
+    resize: vertical;
+    min-height: 120px;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+.input-text {
+    width: 100%;
+    padding: 0.5em 0.8em;
+    border-radius: 3px;
+    height: 3em;
+}
+.input-check, .input-radio{
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+    box-shadow: none;
+}
+option:disabled {
+    color: #49505786;
+}
+.input-check:focus, .input-radio:focus {
+    outline: none;
+    border: 1px solid #80bdff;
+}
+
+button:focus, .input-text:focus, .input-textarea:focus {
+    outline: none;
+    border: 1px solid #80bdff;
+    box-shadow: 0 0 3px 3px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    display: block;
+    color: white;
+    width: 100%;
+    height: 3em;
+    font-weight: bold;
+    background-color: #37AF65;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #40cc76;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90vw;
+    }
+
+}
