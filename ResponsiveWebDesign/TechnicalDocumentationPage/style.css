@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+:root {
+    --fonte-principal: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma,
+    Sans-Serif;
+    --cor-01: #444857;
+    --cor-02: #99A2A2;
+    --cor-03: #e2e5e5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--fonte-principal);
+    color: var(--cor-principal);
+}
+
+#navbar {
+    position: fixed;
+    border-right: 1px solid var(--cor-02);
+    height: 100vh;
+    width: 300px;
+    overflow-y: scroll;
+}
+
+#navbar header{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar::-webkit-scrollbar, #navbar ul::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+#navbar::-webkit-scrollbar-thumb, #navbar ul::-webkit-scrollbar-thumb{
+    background-color: var(--cor-02);
+    border-radius: 4px;
+}
+
+#navbar::-webkit-scrollbar-track, #navbar ul::-webkit-scrollbar-track{
+    background-color: var(--cor-03);
+}
+
+#navbar li {
+    display: block;
+    padding: 10px;
+    padding-top: 15px;
+    height: 30px;
+    white-space: nowrap;
+    border-top: 1px solid var(--cor-01);
+}
+
+#navbar a {
+    margin-top: 3px;
+    color: var(--cor-01);
+    padding: 3px;
+}
+
+#navbar a:hover {
+    background-color: var(--cor-03);
+    border-radius: 3px;
+}
+
+#main-doc {
+    margin-left: 310px;
+    margin-right: 10px;
+}
+
+#main-doc {
+    padding: 12px;
+    margin-bottom: 50px;
+    font-size: 1em;
+    color: var(--cor-01);
+}
+
+#main-doc header {
+    color: black;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+#main-doc p {
+    text-indent: 2em;
+    line-height: 1.7em;
+    margin: 10px 0;
+}
+
+#main-doc li {
+    list-style: disc;
+    line-height: 1.7em;
+    margin: 4px 0;
+    margin-left: 3em;
+}
+
+#main-doc li li {
+    list-style: circle;
+}
+
+#main-doc code {
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    background-color: var(--cor-03);
+    border-radius: 4px;
+}
+
+@media (max-width:800px) {
+    body {
+        flex-direction: column;
+    }
+    #navbar {
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--cor-02);
+        width: 100%;
+        overflow-y: hidden;
+        position: sticky;
+        top: -82px;
+        background-color: white;
+    }   
+    #navbar ul {
+        flex-direction: row;
+        overflow-x: scroll;
+
+    }
+    #navbar li {
+        border-top: none;
+    }
+    #main-doc {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
